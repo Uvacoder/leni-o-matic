@@ -173,6 +173,7 @@ ul {
     margin: auto;
     transition: all ease .2s;
     padding: 2px 8px;
+    user-select: none;
     &:hover, &:focus {
       border-color: #549b97;
       color: #f8f3dc;
