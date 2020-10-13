@@ -86,8 +86,8 @@ export default {
       this.leni.eye = this.randomElement(this.parts.eyes);
       this.leni.mouth = this.randomElement(this.parts.mouths);
       this.leni.hat = this.randomElement(this.parts.hats);
-      this.leni.hand = this.randomElement(this.parts.hand);
-      this.leni.extra = this.randomElement(this.parts.extra);
+      this.leni.hand = this.randomElement(this.parts.hands);
+      this.leni.extra = this.randomElement(this.parts.extras);
     },
     exportLeniSVG() {
       const DOMURL = self.URL || self.webkitURL || self;
