@@ -3,8 +3,8 @@
     <!-- <header class="logo">Leni-o-matic</header> -->
     <nav class="main-nav">
       <ul>
-        <!-- <li>Import</li> -->
-        <li>Export</li>
+        <li @click="exportLeniPNG()">Export PNG</li>
+        <li @click="exportLeniSVG()">Export SVG</li>
         <li @click="chooseOne()">Random</li>
       </ul>
     </nav>
@@ -88,6 +88,48 @@ export default {
       this.leni.hat = this.randomElement(this.parts.hats);
       this.leni.hand = this.randomElement(this.parts.hand);
       this.leni.extra = this.randomElement(this.parts.extra);
+    },
+    exportLeniSVG() {
+      const DOMURL = self.URL || self.webkitURL || self;
+      const svgString = new XMLSerializer().serializeToString(
+        document.querySelector("svg.leni-head")
+      );
+      const svg = new Blob([svgString], {
+        type: "image/svg+xml;charset=utf-8",
+      });
+      const url = DOMURL.createObjectURL(svg);
+
+      const link = document.createElement("a");
+      link.download = "my-leni";
+      link.href = url;
+      link.click();
+    },
+    exportLeniPNG() {
+      const DOMURL = self.URL || self.webkitURL || self;
+      const svgString = new XMLSerializer().serializeToString(
+        document.querySelector("svg.leni-head")
+      );
+      const svg = new Blob([svgString], {
+        type: "image/svg+xml;charset=utf-8",
+      });
+      const url = DOMURL.createObjectURL(svg);
+
+      const img = new Image();
+      const canvas = document.createElement("canvas");
+      canvas.width = 1000;
+      canvas.height = 1000;
+      const context = canvas.getContext("2d");
+
+      img.onload = function () {
+        context.drawImage(img, 0, 0);
+        const png = canvas.toDataURL("image/png", 100);
+
+        const link = document.createElement("a");
+        link.download = "my-leni";
+        link.href = png;
+        link.click();
+      };
+      img.src = url;
     },
   },
   components: {
