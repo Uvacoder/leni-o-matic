@@ -166,11 +166,16 @@ ul {
   display: flex;
   grid-area: nav;
   li {
+    border-bottom: 3px solid transparent;
+    color: #dad9d6;
     cursor: pointer;
     list-style: none;
     margin: auto;
-    &:hover {
-      background-color: #549b97;
+    transition: all ease .2s;
+    padding: 2px 8px;
+    &:hover, &:focus {
+      border-color: #549b97;
+      color: #f8f3dc;
     }
   }
 }
