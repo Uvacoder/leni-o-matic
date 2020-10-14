@@ -78,9 +78,9 @@ export default {
   },
   methods: {
     randomElement(parts) {
-      const keys = Object.keys(parts)
-      const random = Math.trunc(Math.random() * keys.length)
-      return parts[keys[random]]
+      const keys = Object.keys(parts);
+      const random = Math.trunc(Math.random() * keys.length);
+      return parts[keys[random]];
     },
     chooseOne() {
       this.leni.eye = this.randomElement(this.parts.eyes);
@@ -89,30 +89,24 @@ export default {
       this.leni.hand = this.randomElement(this.parts.hands);
       this.leni.extra = this.randomElement(this.parts.extras);
     },
-    exportLeniSVG() {
+    leniURL() {
       const DOMURL = self.URL || self.webkitURL || self;
-      const svgString = new XMLSerializer().serializeToString(
-        document.querySelector("svg.leni-head")
-      );
+      const svgString = new XMLSerializer()
+        .serializeToString(document.querySelector("svg.leni-head"))
+        .replace('viewBox="0 0 200 200"', 'viewBox="0 0 200 200" width="1000px" height="1000px"');
       const svg = new Blob([svgString], {
         type: "image/svg+xml;charset=utf-8",
       });
-      const url = DOMURL.createObjectURL(svg);
-
+      return DOMURL.createObjectURL(svg);
+    },
+    exportLeniSVG() {
       const link = document.createElement("a");
-      link.download = "my-leni";
-      link.href = url;
+      link.download = "my-leni.svg";
+      link.href = this.leniURL();
       link.click();
     },
     exportLeniPNG() {
-      const DOMURL = self.URL || self.webkitURL || self;
-      const svgString = new XMLSerializer().serializeToString(
-        document.querySelector("svg.leni-head")
-      );
-      const svg = new Blob([svgString], {
-        type: "image/svg+xml;charset=utf-8",
-      });
-      const url = DOMURL.createObjectURL(svg);
+      const url = this.leniURL();
 
       const img = new Image();
       const canvas = document.createElement("canvas");
@@ -123,9 +117,9 @@ export default {
       img.onload = function () {
         context.drawImage(img, 0, 0);
         const png = canvas.toDataURL("image/png", 100);
-
         const link = document.createElement("a");
-        link.download = "my-leni";
+        link.download = "my-leni.png";
+
         link.href = png;
         link.click();
       };
@@ -171,10 +165,11 @@ ul {
     cursor: pointer;
     list-style: none;
     margin: auto;
-    transition: all ease .2s;
+    transition: all ease 0.2s;
     padding: 2px 8px;
     user-select: none;
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       border-color: #549b97;
       color: #f8f3dc;
     }
