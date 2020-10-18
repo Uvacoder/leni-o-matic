@@ -60,6 +60,7 @@
         <g v-if="leni.extra.name !== 'none'" v-html="leni.extra.url"></g>
         <g v-if="leni.hat.name !== 'none'" v-html="leni.hat.url"></g>
         <g v-if="leni.hand.name !== 'none'" v-html="leni.hand.url"></g>
+        <g v-if="leni.extra2.name !== 'none'" v-html="leni.extra2.url"></g>
       </svg>
     </main>
 
@@ -85,9 +86,10 @@ export default {
     chooseOne() {
       this.leni.eye = this.randomElement(this.parts.eyes);
       this.leni.mouth = this.randomElement(this.parts.mouths);
+      this.leni.extra = this.randomElement(this.parts.extras);
       this.leni.hat = this.randomElement(this.parts.hats);
       this.leni.hand = this.randomElement(this.parts.hands);
-      this.leni.extra = this.randomElement(this.parts.extras);
+      this.leni.extra2 = this.randomElement(this.parts.extras2);
     },
     leniURL() {
       const DOMURL = self.URL || self.webkitURL || self;
