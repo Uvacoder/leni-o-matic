@@ -57,8 +57,8 @@
         </g>
         <g v-if="leni.eye.name !== 'none'" v-html="leni.eye.url"></g>
         <g v-if="leni.mouth.name !== 'none'" v-html="leni.mouth.url"></g>
-        <g v-if="leni.hat.name !== 'none'" v-html="leni.hat.url"></g>
         <g v-if="leni.extra.name !== 'none'" v-html="leni.extra.url"></g>
+        <g v-if="leni.hat.name !== 'none'" v-html="leni.hat.url"></g>
         <g v-if="leni.hand.name !== 'none'" v-html="leni.hand.url"></g>
       </svg>
     </main>
