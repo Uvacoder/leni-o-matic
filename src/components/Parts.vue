@@ -35,6 +35,12 @@
                 <span>{{ item.name }}</span>
             </li>
         </ul>
+        <ul class="parts" v-if="tabActive == '+ extras'">
+            <li @click="chooseExtra2(item)" class="extra2" v-for="(item, i) in parts.extras2" :key="i"> 
+                <svg viewBox="0 0 200 200" v-html="item.url"></svg>
+                <span>{{ item.name }}</span>
+            </li>
+        </ul>
 
     </section>
 </template>
@@ -62,6 +68,9 @@ export default {
    },
   chooseExtra: function(item) {
       this.leni.extra = item
+   },
+  chooseExtra2: function(item) {
+      this.leni.extra2 = item
    }
  }
 }
