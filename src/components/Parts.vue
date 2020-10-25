@@ -12,31 +12,31 @@
         </ul>
 
         <ul class="parts" v-if="tabActive == 'mouths'">
-            <li @click="chooseMouth(item)" class="mouth" v-for="(item, i) in parts.mouths" :key="i"> 
+            <li @click="chooseMouth(item)" class="mouth" :class="{'active': leni.mouth === item}" v-for="(item, i) in parts.mouths" :key="i"> 
                 <svg viewBox="0 0 200 200" v-html="item.url"></svg>
                 <span>{{ item.name }}</span>
             </li>
         </ul>
         <ul class="parts" v-if="tabActive == 'hats'">
-            <li @click="chooseHat(item)" class="hat" v-for="(item, i) in parts.hats" :key="i"> 
+            <li @click="chooseHat(item)" class="hat" :class="{'active': leni.hat === item}" v-for="(item, i) in parts.hats" :key="i"> 
                 <svg viewBox="0 0 200 200" v-html="item.url"></svg>
                 <span>{{ item.name }}</span>
             </li>
         </ul>
         <ul class="parts" v-if="tabActive == 'hands'">
-            <li @click="chooseHand(item)" class="hand" v-for="(item, i) in parts.hands" :key="i"> 
+            <li @click="chooseHand(item)" class="hand" :class="{'active': leni.hand === item}" v-for="(item, i) in parts.hands" :key="i"> 
                 <svg viewBox="0 0 200 200" v-html="item.url"></svg>
                 <span>{{ item.name }}</span>
             </li>
         </ul>
         <ul class="parts" v-if="tabActive == 'extras'">
-            <li @click="chooseExtra(item)" class="extra" v-for="(item, i) in parts.extras" :key="i"> 
+            <li @click="chooseExtra(item)" class="extra" :class="{'active': leni.extra === item}" v-for="(item, i) in parts.extras" :key="i"> 
                 <svg viewBox="0 0 200 200" v-html="item.url"></svg>
                 <span>{{ item.name }}</span>
             </li>
         </ul>
         <ul class="parts" v-if="tabActive == '+ extras'">
-            <li @click="chooseExtra2(item)" class="extra2" v-for="(item, i) in parts.extras2" :key="i"> 
+            <li @click="chooseExtra2(item)" class="extra2" :class="{'active': leni.extra2 === item}" v-for="(item, i) in parts.extras2" :key="i"> 
                 <svg viewBox="0 0 200 200" v-html="item.url"></svg>
                 <span>{{ item.name }}</span>
             </li>
@@ -54,23 +54,49 @@ export default {
     return store.data
   },
   methods: {
+    checkRoute() {
+      var str = "";
+      var partes = {
+        e: this.leni.eye.name,
+        m: this.leni.mouth.name,
+        x: this.leni.extra.name,
+        hd: this.leni.hand.name,
+        ht: this.leni.hat.name,
+        xx: this.leni.extra2.name,
+      }
+      for (var key in partes) {
+          if (str != "") { str += "&"; }
+          str += key + "=" + encodeURIComponent(partes[key]);
+      }
+      history.pushState(
+          {},
+          null,
+          this.$route.path + '?' + str
+        )
+    },
    chooseEye: function(item) {
-      this.leni.eye = item
+    this.leni.eye = item
+    this.checkRoute()
    },
    chooseMouth: function(item) {
       this.leni.mouth = item
+    this.checkRoute()
    },
   chooseHat: function(item) {
       this.leni.hat = item
+    this.checkRoute()
    },
   chooseHand: function(item) {
       this.leni.hand = item
+    this.checkRoute()
    },
   chooseExtra: function(item) {
       this.leni.extra = item
+    this.checkRoute()
    },
   chooseExtra2: function(item) {
       this.leni.extra2 = item
+    this.checkRoute()
    }
  }
 }
@@ -87,12 +113,15 @@ ul { padding-left: 0; }
 .tabs { 
   cursor: pointer;
   display: flex; 
+  flex-wrap: wrap;
   justify-content: space-around;
   > div {
+    background-color: #354156;
     border: 1px solid;
-    flex: 1 1 auto;
+    flex: 1 1 100px;
+    padding: .8rem .5rem;
     &.active, &:hover, &:focus {
-        background-color: #354156;
+        background-color:transparent;
     }
   }
 }
