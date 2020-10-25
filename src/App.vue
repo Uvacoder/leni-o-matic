@@ -3,14 +3,16 @@
     <h1 class="logo">Lenimatic</h1>
     <nav class="main-nav">
       <ul>
-        <li @click="exportLeniPNG()">Export PNG</li>
-        <li @click="exportLeniSVG()">Export SVG</li>
-        <li @click="chooseOne()">Random</li>
+        <li @click="exportLeniPNG()"><button>Export PNG</button></li>
+        <li @click="exportLeniSVG()"><button>Export SVG</button></li>
+        <li @click="chooseOne()"><button>Random</button></li>
         <li class="social"><Social/></li>
       </ul>
     </nav>
     <main class="leni-container">
-      <svg class="leni-head" viewBox="0 0 200 200">
+      <svg class="leni-head" viewBox="0 0 200 200" role="img" aria-labelledby="leni desc" tabindex="1">
+        <title id="leni">Leni</title>
+        <desc id="desc">Choose parts to build your leni</desc>
         <g id="head">
           <path fill="#69b3b2" d="M60.7 164.84c.88-23.22-16.05-37.56-15.54-66.66.25-14.54 4.14-52.49 49.77-58.84 19.43-2.71 67.12 8.17 61.4 60.34-3.72 34-17.88 41.83-18.66 64.87" />
           <path fill="#141827" d="M62.2 164.84a55 55 0 00-2.82-18.61c-1.88-5.9-4.39-11.56-6.6-17.33a91.49 91.49 0 01-5.48-19.8 74.26 74.26 0 01-.47-15.2 70.06 70.06 0 014.76-21.76 48.29 48.29 0 0117.16-21.72A55.54 55.54 0 0184.85 43a58.42 58.42 0 0114.59-2.5 62.94 62.94 0 0122.12 3.5 52.72 52.72 0 0122 14c7 7.74 10.76 17.77 11.57 28.11a84 84 0 01-1.47 21.69 105.06 105.06 0 01-5.51 19.36c-3.77 9.63-9.12 18.72-11 29a56.91 56.91 0 00-.92 8.33c-.07 1.94 2.93 1.93 3 0a53.57 53.57 0 013.08-15.88c1.72-4.85 4-9.47 6.06-14.17C154 121.68 157.74 108 158.26 94c.42-11.45-1.95-23.15-8.45-32.73a51.59 51.59 0 00-21.35-17.64 68.05 68.05 0 00-24.12-6 62.06 62.06 0 00-29.4 5.91 50.81 50.81 0 00-22.86 20.78 65.21 65.21 0 00-7.69 23.92 77.94 77.94 0 001.89 30.63c3.35 12.41 10.11 23.79 12.3 36.53a45.93 45.93 0 01.62 9.44c-.07 1.93 2.93 1.93 3 0z" />
@@ -140,10 +142,13 @@ export default {
 </script>
 
 <style lang="scss">
+:root {
+  --textColor: #f8f3dc;
+}
 body {
   background-color: #233042;
   background-image: url(assets/stars.svg);
-  color: #f8f3dc;
+  color: var(--textColor);
   margin: 0 auto;
 }
 h1 {
@@ -151,6 +156,11 @@ h1 {
 }
 ul {
   padding-left: 0;
+}
+button {
+  cursor: pointer;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  font-size: 1rem;
 }
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
@@ -173,18 +183,21 @@ ul {
   grid-area: nav;
   margin: 0;
   li:not(.social) {
-    border-bottom: 3px solid transparent;
-    color: #dad9d6;
-    cursor: pointer;
     list-style: none;
-    margin: auto .5rem;
-    transition: all ease 0.2s;
-    padding: 2px 8px;
-    user-select: none;
-    &:hover,
-    &:focus {
-      border-color: #549b97;
-      color: #f8f3dc;
+    button {
+      background: none;
+      border:0;
+      border-bottom: 3px solid transparent;
+      color: #dad9d6;
+      margin: auto .5rem;
+      transition: all ease 0.2s;
+      padding: 2px 8px;
+      user-select: none;
+      &:hover,
+      &:focus {
+        border-color: #549b97;
+        color: var(--textColor);
+      }
     }
   }
 }
@@ -206,30 +219,32 @@ ul {
   }
 }
 
-.parts {
+ul.parts {
   display: flex;
   flex-wrap: wrap;
   li {
-    background-color: #354156;
-    border: 1px solid transparent;
-    cursor: pointer;
     flex: 1 1 100px;
     list-style-type: none;
     margin: 5px;
-    text-align: center;
-    &:hover,
-    &:focus,
-    &.active {
-      background-color: #233042;
-      border-color: initial;
+    button {
+      background-color: #354156;
+      border: 1px solid transparent;
+      color: var(--textColor);
+      text-align: center;
+      width: 100%;
+      svg { margin: 10px; }
+      span {
+        border: 1px solid;
+        display: block;
+      }
+      &:hover,
+      &:focus,
+      &.active {
+        background-color: #233042;
+        border-color: initial;
+      }
     }
-    svg {
-      margin: 10px;
-    }
-    span {
-      border: 1px solid;
-      display: block;
-    }
+
   }
 }
 </style>

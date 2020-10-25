@@ -1,44 +1,56 @@
 <template>
     <section class="parts-container">
         <div class="tabs">
-            <div v-for="(tab, i) in tabs" :key="i" :class="{'active': tabActive === tab}" @click="tabActive = tab">{{ tab }}</div>
+            <button v-for="(tab, i) in tabs" :key="i" :class="{'active': tabActive === tab}" @click="tabActive = tab">{{ tab }}</button>
         </div>
 
         <ul class="parts" v-if="tabActive == 'eyes'">
             <li @click="chooseEye(item)" class="eye" :class="{'active': leni.eye === item}" v-for="(item, i) in parts.eyes" :key="i"> 
-                <svg viewBox="0 0 200 200" v-html="item.url"></svg>
+              <button>
+                <svg viewBox="0 0 200 200" v-html="item.url" role="img"></svg>
                 <span>{{ item.name }}</span>
+              </button>
             </li>
         </ul>
 
         <ul class="parts" v-if="tabActive == 'mouths'">
             <li @click="chooseMouth(item)" class="mouth" :class="{'active': leni.mouth === item}" v-for="(item, i) in parts.mouths" :key="i"> 
-                <svg viewBox="0 0 200 200" v-html="item.url"></svg>
+              <button>
+                <svg viewBox="0 0 200 200" v-html="item.url" role="img"></svg>
                 <span>{{ item.name }}</span>
+              </button>
             </li>
         </ul>
         <ul class="parts" v-if="tabActive == 'hats'">
             <li @click="chooseHat(item)" class="hat" :class="{'active': leni.hat === item}" v-for="(item, i) in parts.hats" :key="i"> 
-                <svg viewBox="0 0 200 200" v-html="item.url"></svg>
+              <button>
+                <svg viewBox="0 0 200 200" v-html="item.url" role="img"></svg>
                 <span>{{ item.name }}</span>
+              </button>
             </li>
         </ul>
         <ul class="parts" v-if="tabActive == 'hands'">
             <li @click="chooseHand(item)" class="hand" :class="{'active': leni.hand === item}" v-for="(item, i) in parts.hands" :key="i"> 
-                <svg viewBox="0 0 200 200" v-html="item.url"></svg>
+              <button>
+                <svg viewBox="0 0 200 200" v-html="item.url" role="img"></svg>
                 <span>{{ item.name }}</span>
+              </button>
             </li>
         </ul>
         <ul class="parts" v-if="tabActive == 'extras'">
             <li @click="chooseExtra(item)" class="extra" :class="{'active': leni.extra === item}" v-for="(item, i) in parts.extras" :key="i"> 
-                <svg viewBox="0 0 200 200" v-html="item.url"></svg>
-                <span>{{ item.name }}</span>
+                <button>
+                  <svg viewBox="0 0 200 200" v-html="item.url" role="img"></svg>
+                  <span>{{ item.name }}</span>
+                </button>
             </li>
         </ul>
         <ul class="parts" v-if="tabActive == '+ extras'">
             <li @click="chooseExtra2(item)" class="extra2" :class="{'active': leni.extra2 === item}" v-for="(item, i) in parts.extras2" :key="i"> 
-                <svg viewBox="0 0 200 200" v-html="item.url"></svg>
+              <button>
+                <svg viewBox="0 0 200 200" v-html="item.url" role="img"></svg>
                 <span>{{ item.name }}</span>
+              </button>
             </li>
         </ul>
 
@@ -115,9 +127,10 @@ ul { padding-left: 0; }
   display: flex; 
   flex-wrap: wrap;
   justify-content: space-around;
-  > div {
+  > button {
     background-color: #354156;
     border: 1px solid;
+    color: var(--textColor);
     flex: 1 1 100px;
     padding: .8rem .5rem;
     &.active, &:hover, &:focus {
