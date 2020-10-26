@@ -53,9 +53,6 @@ export default {
     return store.data;
   },
   mounted() {
-    /*eslint-disable */
-    console.log(this.$route.query === {})
-    /*eslint-enable */
     if (this.$route.query.e) {
       this.leni.eye = Object.values(this.parts.eyes).filter(item => item.name === this.$route.query.e)[0]
       this.leni.mouth = Object.values(this.parts.mouths).filter(item => item.name === this.$route.query.m)[0]
@@ -223,9 +220,10 @@ ul.parts {
   display: flex;
   flex-wrap: wrap;
   li {
-    flex: 1 1 100px;
+    flex: 0 1 calc(100% / 7 - 10px);
     list-style-type: none;
     margin: 5px;
+    width: 14%;
     button {
       background-color: #354156;
       border: 1px solid transparent;
