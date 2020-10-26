@@ -94,7 +94,7 @@ export default {
       this.leni.extra = this.randomElement(this.parts.extras);
       this.leni.hat = this.randomElement(this.parts.hats);
       this.leni.hand = this.randomElement(this.parts.hands);
-      // this.leni.extra2 = this.randomElement(this.parts.extras2);
+      this.leni.extra2 = this.randomElement(this.parts.extras2);
       this.checkRoute()
     },
     leniURL() {
