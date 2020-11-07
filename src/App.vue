@@ -10,10 +10,25 @@
       </ul>
     </nav>
     <main class="leni-container">
-      <svg class="leni-head" viewBox="0 0 200 200" role="img" aria-labelledby="leni desc" tabindex="1">
+        <label class="checkmark-container" for="inputToni">Toni
+          <input id="inputToni" type="checkbox" @change="showToni()">
+            <svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+              <rect class="checkmark-bg" x="1" y="1" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1" rx="3" ry="3"/>
+              <polyline class="checkmark" points="8,17 14,23 25,8" stroke="transparent" stroke-linejoin="round" stroke-linecap="round" stroke-width="4" fill="none"/>
+            </svg>
+        </label>
+        <svg class="leni-head" :class="{ 'toni': isActive }" viewBox="0 0 200 200" role="img" aria-labelledby="leni desc" tabindex="1">
         <title id="leni">Leni</title>
         <desc id="desc">Choose parts to build your leni</desc>
-        <g id="head">
+        <g id="toni">
+            <path fill="#3baacd" d="M60.7 164.84c.88-23.22-16.05-37.56-15.54-66.66.25-14.54 4.14-52.49 49.77-58.84 19.43-2.71 67.12 8.17 61.4 60.34-3.72 34-17.88 41.83-18.66 64.87"/>
+            <path fill="#131726" d="M62.2 164.84a55 55 0 00-2.82-18.61c-1.88-5.9-4.39-11.56-6.6-17.33a91.49 91.49 0 01-5.48-19.8 74.26 74.26 0 01-.47-15.2 70.06 70.06 0 014.76-21.76 48.29 48.29 0 0117.16-21.72A55.54 55.54 0 0184.85 43a58.42 58.42 0 0114.59-2.5 62.94 62.94 0 0122.12 3.5 52.72 52.72 0 0122 14c7 7.74 10.76 17.77 11.57 28.11a84 84 0 01-1.47 21.69 105.06 105.06 0 01-5.51 19.36c-3.77 9.63-9.12 18.72-11 29a56.91 56.91 0 00-.92 8.33c-.07 1.94 2.93 1.93 3 0a53.57 53.57 0 013.08-15.88c1.72-4.85 4-9.47 6.06-14.17C154 121.68 157.74 108 158.26 94c.42-11.45-1.95-23.15-8.45-32.73a51.59 51.59 0 00-21.35-17.64 68.05 68.05 0 00-24.12-6 62.06 62.06 0 00-29.4 5.91 50.81 50.81 0 00-22.86 20.78 65.21 65.21 0 00-7.69 23.92 77.94 77.94 0 001.89 30.63c3.35 12.41 10.11 23.79 12.3 36.53a45.93 45.93 0 01.62 9.44c-.07 1.93 2.93 1.93 3 0z"/>
+            <path fill="#fcee21" d="M58.65 147.13s9.7-5.83 2.42-20.07C58.9 122.81 53 119 48.88 121c0 0 6.32 18 9.77 26.13zM69.26 48.77s1 7.15-2.6 11.46c-1.88 2.25-7.86 8.57-13.88 7.05a46.23 46.23 0 0116.48-18.51zM96.18 45.56c-.58 2.55 2 5.19 6.87 3.44 4.6-1.63 3.7-5.58 2-6.46-3.05-1.62-8.05-.47-8.87 3.02zM155.11 78.33s-9.33 1.18-12.13-7.82c-1.25-4-.15-9 1.79-12.67 0 0 9.14 10.16 10.34 20.49zM147.08 110.11c-1.51 2.57-2.12 7.34-1.24 9.88s4.06 4.86 4.06 4.86c2.39-5.47 5.75-19 5.75-19-5.03.41-6.83 1.85-8.57 4.26zM58.44 92.14a3.14 3.14 0 003.62 2.59 3.42 3.42 0 002.23-4 3.08 3.08 0 00-3.81-2.25 3.24 3.24 0 00-2 3.7M124.61 53.55a2.36 2.36 0 002.3 2.19 3.14 3.14 0 003-1.74 2.66 2.66 0 00-3.15-3 2.77 2.77 0 00-2.15 2.55z"/>
+            <path fill="#ffca30" d="M138 164.6l-.61 5c-10.83.24-72.54.06-77-.06-.18-1.32.09-3.55-.25-5-.06.06 46.74.29 77.86.06z"/>
+            <path fill="#131726" d="M136.49 164.6l-.61 5 1.5-1.5c-9.85.21-19.71.12-29.56.12q-18.69 0-37.38-.1c-3.37 0-6.75 0-10.11-.08l1.5 1.5c-.2-1.79.06-3.58-.3-5.36l-1.45 1.89 17.62.07h38.08q11.1 0 22.21-.09a1.5 1.5 0 000-3c-13.27.1-26.55.11-39.82.1q-16 0-31.93-.07h-6.16a1.53 1.53 0 00-1.45 1.9c.31 1.5 0 3.06.2 4.57a1.52 1.52 0 001.5 1.5c8.34.21 16.7.12 25 .14q19.32.06 38.64 0c4.45 0 8.91 0 13.36-.1a1.54 1.54 0 001.5-1.5l.61-5c.28-1.9-2.72-1.89-2.95.01z"/>
+            <path fill="#131726" d="M62.2 164.84a55 55 0 00-2.82-18.61c-1.88-5.9-4.39-11.56-6.6-17.33a91.49 91.49 0 01-5.48-19.8 74.26 74.26 0 01-.47-15.2 70.06 70.06 0 014.76-21.76 48.29 48.29 0 0117.16-21.72A55.54 55.54 0 0184.85 43a58.42 58.42 0 0114.59-2.5 62.94 62.94 0 0122.12 3.5 52.72 52.72 0 0122 14c7 7.74 10.76 17.77 11.57 28.11a84 84 0 01-1.47 21.69 105.06 105.06 0 01-5.51 19.36c-3.77 9.63-9.12 18.72-11 29a56.91 56.91 0 00-.92 8.33c-.07 1.94 2.93 1.93 3 0a53.57 53.57 0 013.08-15.88c1.72-4.85 4-9.47 6.06-14.17C154 121.68 157.74 108 158.26 94c.42-11.45-1.95-23.15-8.45-32.73a51.59 51.59 0 00-21.35-17.64 68.05 68.05 0 00-24.12-6 62.06 62.06 0 00-29.4 5.91 50.81 50.81 0 00-22.86 20.78 65.21 65.21 0 00-7.69 23.92 77.94 77.94 0 001.89 30.63c3.35 12.41 10.11 23.79 12.3 36.53a45.93 45.93 0 01.62 9.44c-.07 1.93 2.93 1.93 3 0z"/>
+        </g>
+        <g id="head" :class="{ 'active': isActive }">
           <path fill="#69b3b2" d="M60.7 164.84c.88-23.22-16.05-37.56-15.54-66.66.25-14.54 4.14-52.49 49.77-58.84 19.43-2.71 67.12 8.17 61.4 60.34-3.72 34-17.88 41.83-18.66 64.87" />
           <path fill="#141827" d="M62.2 164.84a55 55 0 00-2.82-18.61c-1.88-5.9-4.39-11.56-6.6-17.33a91.49 91.49 0 01-5.48-19.8 74.26 74.26 0 01-.47-15.2 70.06 70.06 0 014.76-21.76 48.29 48.29 0 0117.16-21.72A55.54 55.54 0 0184.85 43a58.42 58.42 0 0114.59-2.5 62.94 62.94 0 0122.12 3.5 52.72 52.72 0 0122 14c7 7.74 10.76 17.77 11.57 28.11a84 84 0 01-1.47 21.69 105.06 105.06 0 01-5.51 19.36c-3.77 9.63-9.12 18.72-11 29a56.91 56.91 0 00-.92 8.33c-.07 1.94 2.93 1.93 3 0a53.57 53.57 0 013.08-15.88c1.72-4.85 4-9.47 6.06-14.17C154 121.68 157.74 108 158.26 94c.42-11.45-1.95-23.15-8.45-32.73a51.59 51.59 0 00-21.35-17.64 68.05 68.05 0 00-24.12-6 62.06 62.06 0 00-29.4 5.91 50.81 50.81 0 00-22.86 20.78 65.21 65.21 0 00-7.69 23.92 77.94 77.94 0 001.89 30.63c3.35 12.41 10.11 23.79 12.3 36.53a45.93 45.93 0 01.62 9.44c-.07 1.93 2.93 1.93 3 0z" />
           <g fill="#151b2d" opacity=".16">
@@ -52,37 +67,40 @@ export default {
   data: function () {
     return store.data;
   },
-  mounted() {
-    if (this.$route.query.e) {
-      this.leni.eye = Object.values(this.parts.eyes).filter(item => item.name === this.$route.query.e)[0]
-      this.leni.mouth = Object.values(this.parts.mouths).filter(item => item.name === this.$route.query.m)[0]
-      this.leni.extra = Object.values(this.parts.extras).filter(item => item.name === this.$route.query.x)[0]
-      this.leni.hand = Object.values(this.parts.hands).filter(item => item.name === this.$route.query.hd)[0]
-      this.leni.hat = Object.values(this.parts.hats).filter(item => item.name === this.$route.query.ht)[0]
-      this.leni.extra2 = Object.values(this.parts.extras2).filter(item => item.name === this.$route.query.xx)[0]
-    }
-  },
+  // mounted() {
+  //   if (this.$route.query.e) {
+  //     this.leni.eye = Object.values(this.parts.eyes).filter(item => item.name === this.$route.query.e)[0]
+  //     this.leni.mouth = Object.values(this.parts.mouths).filter(item => item.name === this.$route.query.m)[0]
+  //     this.leni.extra = Object.values(this.parts.extras).filter(item => item.name === this.$route.query.x)[0]
+  //     this.leni.hand = Object.values(this.parts.hands).filter(item => item.name === this.$route.query.hd)[0]
+  //     this.leni.hat = Object.values(this.parts.hats).filter(item => item.name === this.$route.query.ht)[0]
+  //     this.leni.extra2 = Object.values(this.parts.extras2).filter(item => item.name === this.$route.query.xx)[0]
+  //   }
+  // },
   methods: {
-    checkRoute() {
-      var str = "";
-      var partes = {
-        e: this.leni.eye.name,
-        m: this.leni.mouth.name,
-        x: this.leni.extra.name,
-        hd: this.leni.hand.name,
-        ht: this.leni.hat.name,
-        xx: this.leni.extra2.name,
-      }
-      for (var key in partes) {
-          if (str != "") { str += "&"; }
-          str += key + "=" + encodeURIComponent(partes[key]);
-      }
-      history.pushState(
-          {},
-          null,
-          this.$route.path + '?' + str
-        )
+    showToni() {
+      this.isActive = !this.isActive;
     },
+    // checkRoute() {
+    //   var str = "";
+    //   var partes = {
+    //     e: this.leni.eye.name,
+    //     m: this.leni.mouth.name,
+    //     x: this.leni.extra.name,
+    //     hd: this.leni.hand.name,
+    //     ht: this.leni.hat.name,
+    //     xx: this.leni.extra2.name,
+    //   }
+    //   for (var key in partes) {
+    //       if (str != "") { str += "&"; }
+    //       str += key + "=" + encodeURIComponent(partes[key]);
+    //   }
+    //   history.pushState(
+    //       {},
+    //       null,
+    //       this.$route.path + '?' + str
+    //     )
+    // },
     randomElement(parts) {
       const keys = Object.keys(parts);
       const random = Math.trunc(Math.random() * keys.length);
@@ -97,16 +115,16 @@ export default {
       this.leni.extra2 = this.randomElement(this.parts.extras2);
       this.checkRoute()
     },
-    leniURL() {
-      const DOMURL = self.URL || self.webkitURL || self;
-      const svgString = new XMLSerializer()
-        .serializeToString(document.querySelector("svg.leni-head"))
-        .replace('viewBox="0 0 200 200"', 'viewBox="0 0 200 200" width="1000px" height="1000px"');
-      const svg = new Blob([svgString], {
-        type: "image/svg+xml;charset=utf-8",
-      });
-      return DOMURL.createObjectURL(svg);
-    },
+    // leniURL() {
+    //   const DOMURL = self.URL || self.webkitURL || self;
+    //   const svgString = new XMLSerializer()
+    //     .serializeToString(document.querySelector("svg.leni-head"))
+    //     .replace('viewBox="0 0 200 200"', 'viewBox="0 0 200 200" width="1000px" height="1000px"');
+    //   const svg = new Blob([svgString], {
+    //     type: "image/svg+xml;charset=utf-8",
+    //   });
+    //   return DOMURL.createObjectURL(svg);
+    // },
     exportLeniSVG() {
       const link = document.createElement("a");
       link.download = "my-leni.svg";
@@ -141,6 +159,10 @@ export default {
 <style lang="scss">
 :root {
   --textColor: #f8f3dc;
+  --toniEye: #eae3ca;
+}
+.toni-eye {
+  fill: var(--toniEye);
 }
 body {
   background-color: #233042;
@@ -207,6 +229,7 @@ button {
   border: 1px solid;
   border-bottom: 0;
   grid-area: leni;
+  position: relative;
 }
 
 .leni-head {
@@ -242,7 +265,53 @@ ul.parts {
         border-color: initial;
       }
     }
+  }
+}
 
+#head.active {
+  display: none;
+}
+.checkmark-container {
+  align-items: center;
+	cursor: pointer;
+  display: flex;
+  font-weight: bold;
+  margin: 1rem;
+  position: absolute;
+  right: 0;
+  input[type="checkbox"] {
+    cursor: pointer;
+    opacity: 0;
+    position: absolute;
+    right: -3px;
+    top: -3px;
+    height: 2rem;
+    width: 2rem;
+    &:hover + svg {
+      .checkmark-bg { fill: var(--siteGreen); }
+    }
+    &:checked + svg {
+      .checkmark-bg { fill: var(--siteBlue); }
+      .checkmark { stroke: white; }
+    }
+    &:focus + svg {
+      outline: -webkit-focus-ring-color auto 1px;
+    }
+  }
+  svg {
+    margin-left: .8rem;
+    stroke: var(--borderColor);
+    width: 2rem;
+    height: 2rem;
+    * { transition: all .1s linear; }
+  }
+}
+.leni-head.toni {
+  .toni-eye {
+    --toniEye: #fcee21;
+  }
+  #eye, #eye-left, #eye-heart, #eye-broken, #eye-confused, #eye-up, #eye-right, #eye-up2, #eye-tired, #eye-bad, #eye-smirk, #eye-sick, #eye-tired2, #eye-happy {
+    path:first-child { fill: none; }
   }
 }
 </style>
