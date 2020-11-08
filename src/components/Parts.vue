@@ -118,7 +118,6 @@ export default {
 ul { padding-left: 0; }
 
 .parts-container {
-  border: 1px solid;
   border-top: 0;
   grid-area: parts;
 }
@@ -128,13 +127,15 @@ ul { padding-left: 0; }
   flex-wrap: wrap;
   justify-content: space-around;
   > button {
-    background-color: #354156;
-    border: 1px solid;
+    background-color: var(--bgColor);
+    border-radius: 50px;
+    border: 0;
     color: var(--textColor);
     flex: 1 1 100px;
+    margin: 5px;
     padding: .8rem .5rem;
     &.active, &:hover, &:focus {
-        background-color:transparent;
+        background-color: #0b3d4e;
     }
   }
 }
