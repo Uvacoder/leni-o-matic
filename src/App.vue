@@ -160,9 +160,13 @@ export default {
 :root {
   --textColor: #f8f3dc;
   --toniEye: #eae3ca;
+  --toniEyelid: #69b3b2;
 }
 .toni-eye {
   fill: var(--toniEye);
+}
+.toni-eyelid {
+  fill: var(--toniEyelid);
 }
 body {
   background-color: #233042;
@@ -307,9 +311,8 @@ ul.parts {
   }
 }
 .leni-head.toni {
-  .toni-eye {
-    --toniEye: #fcee21;
-  }
+  --toniEye: #fcee21;
+  --toniEyelid: #3baacc;
   #eye, #eye-left, #eye-heart, #eye-broken, #eye-confused, #eye-up, #eye-right, #eye-up2, #eye-tired, #eye-bad, #eye-smirk, #eye-sick, #eye-tired2, #eye-happy {
     path:first-child { fill: none; }
   }
