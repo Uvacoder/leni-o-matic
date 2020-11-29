@@ -1,14 +1,9 @@
 <template>
   <div id="app">
     <h1 class="logo">
-    <svg overflow="visible" viewBox="0 0 492.7 79.4">
-      <g fill="#05080c">
-        <path d="M5.6 79.4L21.5 4.5h23L32.4 62.1h23l-3.7 17.3H5.6zM84.2 62.1h23l-3.7 17.3h-46L73.4 4.5h46.1l-3.6 17.3h-23l-2.5 11.5h23l-3.7 17.3h-23l-2.5 11.5zM109.3 79.4l15.9-74.9h23l4.2 34.6 7.3-34.6h23l-15.9 74.9h-23l-4.1-34.6-7.4 34.6h-23zM211.7 4.5l-15.9 74.9h-23l15.9-74.9h23zM201.5 79.4l15.9-74.9H252l-1.6 34.6 13.1-34.6h34.6l-15.9 74.9h-23l11-51.9-22.5 51.9h-11.5l-.5-51.9-11 51.9h-23.2zM314.6 67.9L311 79.4h-23l27.4-74.9H350l-4.4 74.9h-23l1.3-11.5h-9.3zm11.1-17.3l3.3-28.8-9 28.8h5.7zM387.7 21.8l-12.3 57.6h-23l12.3-57.6h-11.5l3.6-17.3h46.1l-3.6 17.3h-11.6zM431.7 4.5l-15.9 74.9h-23l15.9-74.9h23zM467.6 79.4H433l-9-11.5L435 16l14-11.5h34.6l9.1 11.5-3.7 17.3h-23l2.5-11.5H457l-8.6 40.3h11.5l2.4-11.5h23l-3.6 17.3-14.1 11.5z"/>
-      </g>
-      <g fill="#ffcb31" stroke="#05080c" stroke-miterlimit="10">
-        <path d="M.6 75.4L16.5.5h23L27.4 58.1h23l-3.7 17.3H.6zM79.2 58.1h23l-3.7 17.3h-46L68.4.5h46.1l-3.6 17.3h-23l-2.5 11.5h23l-3.7 17.3h-23l-2.5 11.5zM104.3 75.4L120.2.5h23l4.2 34.6L154.7.5h23l-15.9 74.9h-23l-4.1-34.6-7.4 34.6h-23zM206.7.5l-15.9 74.9h-23L183.7.5h23zM196.5 75.4L212.4.5H247l-1.6 34.6L258.5.5h34.6l-15.9 74.9h-23l11-51.9-22.5 51.9h-11.5l-.5-51.9-11 51.9h-23.2zM309.6 63.9L306 75.4h-23L310.4.5H345l-4.4 74.9h-23l1.3-11.5h-9.3zm11.1-17.3l3.3-28.8-9 28.8h5.7zM382.7 17.8l-12.3 57.6h-23l12.3-57.6h-11.5L351.8.5h46.1l-3.6 17.3h-11.6zM426.7.5l-15.9 74.9h-23L403.7.5h23zM462.6 75.4H428l-9-11.5L430 12 444 .5h34.6l9.1 11.5-3.7 17.3h-23l2.5-11.5H452l-8.6 40.3h11.5l2.4-11.5h23l-3.6 17.3-14.1 11.5z"/>
-      </g>
-    </svg>
+      <svg overflow="visible" viewBox="0 0 35.9 9.9">
+        <path d="M.2 0c.2 0 .3.2.4.4.1 2.7.1 5.5.4 8.2.4-.1 1-.3 1.4-.3.2 0 .4.1.4.3 0 .2 0 .3-.2.3-.4.2-1 .2-1.4.3-.2.1-.3.2-.5.2-.1 0-.3-.2-.4-.3-.1-1.4-.1-3-.2-4.4l-.1-3V.2C.1 0 .1 0 .2 0zM3.6 8V5.6c0-1.7-.2-2.8-.2-4.5V.5C5.3.3 5.5.5 5.5.7c.1.1 0 .3-.1.3H4.1c-.1 0-.1.1-.1.1 0 1.3.1 2.2.2 3.5h1.4c.4 0 .7.7.1.7H4.2v2.8c.3.1 1.8-.2 1.8.3 0 .1-.1.3-.2.3-.4 0-2.1.2-2.2-.2V8zM7.6.7c.2-.4.6 0 .7.1C9 2.9 9.5 5 10.4 7.2l.1-1.7c.1-1.5.1-2.8.1-4.3 0-.2.3-.3.5-.3.1 0 .3 0 .3.2-.2 2.6-.3 5.3-.4 8.1v.2c0 .1-.2.2-.3.2s-.3-.1-.3-.2C9.6 7 8.8 4.8 8.1 2.6L8 9.4c-.3.6-.7.3-.7-.1L7.6.7zM13.2.7l.6 7.3c0 .2.1.4.1.6 0 .2-.2.3-.4.3-.3 0-.3-.2-.3-.5l-.3-5.3c-.1-.9-.2-1.7-.2-2.6-.1-.2.5-.1.5.2zM15.2 3.6c0-1.9.2-3.3.5-3.3.1.1.3.1.4.4.2.9.5 2.5 1.2 3.5.1-.1.5-.9.8-1.3l.1-.1c.4-.8.7-1.4 1-2.2.1-.1.2-.2.3-.2.2 0 .3.1.4.2-.1 2.7 0 5.3-.1 8v.6c-.1.1-.2.3-.4.3-.1 0-.2-.1-.3-.2v-.7-6.5c-.3.5-.6 1-.8 1.6l-.7 1.4c-.1.2-.4.5-.6.1l-1.2-2.7c-.3 2.2-.3 4.4-.3 6.6 0 .1-.1.2-.3.2-.1 0-.3-.1-.3-.2l.3-5.5zM21.8.7c.1-1.1.8-.8 1 0 .3 1.2.5 2.3 1.8 8.6 0 .3-.4.5-.6.1l-.4-2.2-1.6.4c-.1.6-.2 1.6-.2 2.1 0 .3-.5.2-.5 0l.5-9zm.2 5.6v.6l1.5-.2-1.2-5.3c-.1.8-.3 4.2-.3 4.9zM26 4.1V.8h-1c-.4-.1-.5-.5.1-.6.9 0 1.8 0 2.8.1.5 0 .5.6.2.6h-1.3s-.1 3.8-.1 5.4v2.2c-.1.4-.6.3-.7-.1V4.1zM30.2.7l.5 7.3c0 .2.1.4.1.6 0 .2-.2.3-.4.3-.3 0-.3-.2-.3-.5l-.3-5.3c-.1-.9-.2-1.7-.2-2.6-.1-.2.5-.1.6.2zM34.3.5c.6 0 1.1.3 1.1.9 0 .1 0 .3-.2.3-.4 0-.5-.5-.9-.6h-.1c-1.6 0-2.8 7.5 0 7.7h.1c.9 0 .5-1.1 1.2-1.1.2 0 .3.1.3.3 0 .2-.1.2-.2.5-.3.6-.7.9-1.3.9h-.1c-2.3-.1-2.4-3.3-2.2-4.9.1-1.3.6-4 2.3-4z" fill="#ffca30"/>
+      </svg>
     </h1>
     <nav class="main-nav">
       <ul>
@@ -26,7 +21,14 @@
               <polyline class="checkmark" points="8,17 14,23 25,8" stroke="transparent" stroke-linejoin="round" stroke-linecap="round" stroke-width="4" fill="none"/>
             </svg>
         </label>
-        <svg class="leni-head" :class="{ 'toni': isActive }" viewBox="0 0 200 200" role="img" aria-labelledby="leni desc" tabindex="1">
+        <svg class="leni-head" :class="{'toni' : isActive}" viewBox="0 0 200 200" role="img" aria-labelledby="leni desc" tabindex="1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <svg:style type="text/css">
+            .leni-head.toni .toni-eye { fill: #fcee21; }
+            .leni-head.toni .toni-eyelid, .leni-head.toni .leni-hands { fill: #3baacc; }
+            .leni-head.toni #eye path:first-child, .leni-head.toni #eye-left path:first-child, .leni-head.toni #eye-heart path:first-child, .leni-head.toni #eye-broken path:first-child, .leni-head.toni #eye-confused path:first-child, .leni-head.toni #eye-up path:first-child, .leni-head.toni #eye-right path:first-child, .leni-head.toni #eye-up2 path:first-child, .leni-head.toni #eye-tired path:first-child, .leni-head.toni #eye-bad path:first-child, .leni-head.toni #eye-smirk path:first-child, .leni-head.toni #eye-sick path:first-child, .leni-head.toni #eye-tired2 path:first-child, .leni-head.toni #eye-happy path:first-child {
+              fill: none;
+            }
+        </svg:style>
         <title id="leni">Leni</title>
         <desc id="desc">Choose parts to build your leni</desc>
         <g id="toni">
@@ -37,7 +39,7 @@
             <path fill="#131726" d="M136.49 164.6l-.61 5 1.5-1.5c-9.85.21-19.71.12-29.56.12q-18.69 0-37.38-.1c-3.37 0-6.75 0-10.11-.08l1.5 1.5c-.2-1.79.06-3.58-.3-5.36l-1.45 1.89 17.62.07h38.08q11.1 0 22.21-.09a1.5 1.5 0 000-3c-13.27.1-26.55.11-39.82.1q-16 0-31.93-.07h-6.16a1.53 1.53 0 00-1.45 1.9c.31 1.5 0 3.06.2 4.57a1.52 1.52 0 001.5 1.5c8.34.21 16.7.12 25 .14q19.32.06 38.64 0c4.45 0 8.91 0 13.36-.1a1.54 1.54 0 001.5-1.5l.61-5c.28-1.9-2.72-1.89-2.95.01z"/>
             <path fill="#131726" d="M62.2 164.84a55 55 0 00-2.82-18.61c-1.88-5.9-4.39-11.56-6.6-17.33a91.49 91.49 0 01-5.48-19.8 74.26 74.26 0 01-.47-15.2 70.06 70.06 0 014.76-21.76 48.29 48.29 0 0117.16-21.72A55.54 55.54 0 0184.85 43a58.42 58.42 0 0114.59-2.5 62.94 62.94 0 0122.12 3.5 52.72 52.72 0 0122 14c7 7.74 10.76 17.77 11.57 28.11a84 84 0 01-1.47 21.69 105.06 105.06 0 01-5.51 19.36c-3.77 9.63-9.12 18.72-11 29a56.91 56.91 0 00-.92 8.33c-.07 1.94 2.93 1.93 3 0a53.57 53.57 0 013.08-15.88c1.72-4.85 4-9.47 6.06-14.17C154 121.68 157.74 108 158.26 94c.42-11.45-1.95-23.15-8.45-32.73a51.59 51.59 0 00-21.35-17.64 68.05 68.05 0 00-24.12-6 62.06 62.06 0 00-29.4 5.91 50.81 50.81 0 00-22.86 20.78 65.21 65.21 0 00-7.69 23.92 77.94 77.94 0 001.89 30.63c3.35 12.41 10.11 23.79 12.3 36.53a45.93 45.93 0 01.62 9.44c-.07 1.93 2.93 1.93 3 0z"/>
         </g>
-        <g id="head" :class="{ 'active': isActive }">
+        <g id="head" v-show="!isActive">
           <path fill="#69b3b2" d="M60.7 164.84c.88-23.22-16.05-37.56-15.54-66.66.25-14.54 4.14-52.49 49.77-58.84 19.43-2.71 67.12 8.17 61.4 60.34-3.72 34-17.88 41.83-18.66 64.87" />
           <path fill="#141827" d="M62.2 164.84a55 55 0 00-2.82-18.61c-1.88-5.9-4.39-11.56-6.6-17.33a91.49 91.49 0 01-5.48-19.8 74.26 74.26 0 01-.47-15.2 70.06 70.06 0 014.76-21.76 48.29 48.29 0 0117.16-21.72A55.54 55.54 0 0184.85 43a58.42 58.42 0 0114.59-2.5 62.94 62.94 0 0122.12 3.5 52.72 52.72 0 0122 14c7 7.74 10.76 17.77 11.57 28.11a84 84 0 01-1.47 21.69 105.06 105.06 0 01-5.51 19.36c-3.77 9.63-9.12 18.72-11 29a56.91 56.91 0 00-.92 8.33c-.07 1.94 2.93 1.93 3 0a53.57 53.57 0 013.08-15.88c1.72-4.85 4-9.47 6.06-14.17C154 121.68 157.74 108 158.26 94c.42-11.45-1.95-23.15-8.45-32.73a51.59 51.59 0 00-21.35-17.64 68.05 68.05 0 00-24.12-6 62.06 62.06 0 00-29.4 5.91 50.81 50.81 0 00-22.86 20.78 65.21 65.21 0 00-7.69 23.92 77.94 77.94 0 001.89 30.63c3.35 12.41 10.11 23.79 12.3 36.53a45.93 45.93 0 01.62 9.44c-.07 1.93 2.93 1.93 3 0z" />
           <g fill="#151b2d" opacity=".16">
@@ -173,12 +175,12 @@ export default {
   --toniEye: #eae3ca;
   --toniEyelid: #69b3b2;
 }
-.toni-eye {
-  fill: var(--toniEye);
-}
-.toni-eyelid {
-  fill: var(--toniEyelid);
-}
+// .toni-eye {
+//   fill: var(--toniEye);
+// }
+// .toni-eyelid {
+//   fill: var(--toniEyelid);
+// }
 body {
   background: var(--bgColor) url(assets/stars.svg);
   background: var(--bgColor) url(assets/lenis-all.png);
@@ -262,8 +264,8 @@ button {
 .logo {
   grid-area: logo;
   svg {
+    max-height: 40px;
     width: 100%;
-    max-height: 30px;
   }
 }
 
@@ -274,6 +276,7 @@ button {
 }
 
 .leni-head {
+  background-color: rgba(#1a5469, .8);
   width: 100%;
   .none {
     display: none;
@@ -289,7 +292,7 @@ ul.parts {
     list-style-type: none;
     margin: 5px;
     button {
-      background-color: #174c5f;
+      background-color: #1a5469;
       border: 1px solid transparent;
       border-radius: 50%;
       color: var(--textColor);
@@ -310,10 +313,6 @@ ul.parts {
       }
     }
   }
-}
-
-#head.active {
-  display: none;
 }
 .checkmark-container {
   align-items: center;
@@ -351,8 +350,11 @@ ul.parts {
   }
 }
 .leni-head.toni {
-  --toniEye: #fcee21;
-  --toniEyelid: #3baacc;
+  // --toniEye: #fcee21;
+  // --toniEyelid: #3baacc;
+  .leni-hands {
+    fill: #3baacc;
+  }
   #eye, #eye-left, #eye-heart, #eye-broken, #eye-confused, #eye-up, #eye-right, #eye-up2, #eye-tired, #eye-bad, #eye-smirk, #eye-sick, #eye-tired2, #eye-happy {
     path:first-child { fill: none; }
   }

@@ -108,7 +108,7 @@ export default {
    },
   chooseExtra2: function(item) {
       this.leni.extra2 = item
-    this.checkRoute()
+      this.checkRoute()
    }
  }
 }
